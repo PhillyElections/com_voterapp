@@ -4,14 +4,14 @@
 defined('_JEXEC') or die('Restricted access');
 
 /**
- * Items Model for Voterapp2 Component.
+ * Items Model for Voterapp Component.
  *
  * @package    Philadelphia.Votes
  * @subpackage Components
  *
  * @license    GNU/GPL
  */
-class Voterapp2ModelMain extends JModel
+class VoterappModelMain extends JModel
 {
     /**
      * Items data array.
@@ -37,12 +37,12 @@ class Voterapp2ModelMain extends JModel
      */
     public function _buildQuery()
     {
-        $query = "  SELECT e.id as election_id , t.name as election_type ";
-        $query .= " FROM `#__rt_election` as e ";
-        $query .= " JOIN `#__rt_split_type` as t ON e.type = t.id ";
-        $query .= " WHERE e.showElection=1 ";
-        $query .= " ORDER BY e.election_date DESC ";
-        $query .= " LIMIT 0 , 1 ";
+        $query = '  SELECT e.id as election_id , t.name as election_type ';
+        $query .= ' FROM `#__rt_election` as e ';
+        $query .= ' JOIN `#__rt_split_type` as t ON e.type = t.id ';
+        $query .= ' WHERE e.showElection=1 ';
+        $query .= ' ORDER BY e.election_date DESC ';
+        $query .= ' LIMIT 0 , 1 ';
 
         return $query;
     }
@@ -54,7 +54,6 @@ class Voterapp2ModelMain extends JModel
      */
     public function getData()
     {
-
         $map_array = array(
           'Mayoral P & G'       => 'mayoral_p_g',
           'Presidential P & G'    => 'presidential_p_g',
@@ -76,10 +75,10 @@ class Voterapp2ModelMain extends JModel
                 //Logic start from here to grab all fncky things
                 if (isset($row_split['election_type']) && ! empty($row_split['election_type']) && isset($map_array [$row_split['election_type']])) {
                     //get valid splits for which ballots is upload. Not special one.
-                    $ballot_query = "  SELECT b.sid , b.file_id , b.file_name , s.division ";
-                    $ballot_query .= " FROM `#__rt_ballot_upload` AS b ";
-                    $ballot_query .= " JOIN `#__rt_split` AS s ON s." . $map_array[$row_split['election_type']] . " = b.sid ";
-                    $ballot_query .= " WHERE b.eid = " . $db->quote($row_split['election_id']) . " ";
+                    $ballot_query = '  SELECT b.sid , b.file_id , b.file_name , s.division ';
+                    $ballot_query .= ' FROM `#__rt_ballot_upload` AS b ';
+                    $ballot_query .= ' JOIN `#__rt_split` AS s ON s.' . $map_array[$row_split['election_type']] . ' = b.sid ';
+                    $ballot_query .= ' WHERE b.eid = ' . $db->quote($row_split['election_id']) . ' ';
                     $db->setQuery($ballot_query);
                     $normal_splits = array();
                     $normal = array();
@@ -98,7 +97,7 @@ class Voterapp2ModelMain extends JModel
                     }
                     //now handle special splits over here.
                     $updated_array = array();
-                    $splits_in_election_query = " SELECT sid , file_name , file_id from `#__rt_ballot_upload` where eid = " . $db->quote($row_split['election_id']) . " " . $query_not_in;
+                    $splits_in_election_query = ' SELECT sid , file_name , file_id from `#__rt_ballot_upload` where eid = ' . $db->quote($row_split['election_id']) . ' ' . $query_not_in;
                     $db->setQuery($splits_in_election_query);
                     if ($db->query()) {
                         $a = $db->loadObjectList();
@@ -107,7 +106,7 @@ class Voterapp2ModelMain extends JModel
                             if (count($n_arr) > 1) {
                                 $val->sid = str_replace('^', '', $n_arr[0]);
                                 //Select custom wards over here....
-                                $special_div_query = " SELECT data , name from `#__rt_special_split` WHERE id = " . $db->quote($val->sid) . " LIMIT 0 , 1 ";
+                                $special_div_query = ' SELECT data , name from `#__rt_special_split` WHERE id = ' . $db->quote($val->sid) . ' LIMIT 0 , 1 ';
 
                                 $db->setQuery($special_div_query);
                                 if ($db->query()) {

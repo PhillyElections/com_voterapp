@@ -1,6 +1,6 @@
 <?php
 /**
- * Site bootstrap file for Voterapp2 Component.
+ * Site bootstrap file for Voterapp Component.
  *
  * @package    Philadelphia.Votes
  * @subpackage Components
@@ -29,7 +29,7 @@ if ($controller = JRequest::getWord('view', 'main')) {
 }
 
 // Create the controller
-$classname = 'Voterapp2Controller' . ucfirst($controller);
+$classname = 'VoterappController' . ucfirst($controller);
 
 $controller = new $classname();
 

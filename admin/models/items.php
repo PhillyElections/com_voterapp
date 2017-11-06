@@ -4,14 +4,14 @@
 defined('_JEXEC') or die('Restricted access');
 
 /**
- * Items Model for Voterapp2 Component.
+ * Items Model for Voterapp Component.
  *
  * @package    Philadelphia.Votes
  * @subpackage Components
  *
  * @license    GNU/GPL
  */
-class Voterapp2ModelItems extends JModel
+class VoterappModelItems extends JModel
 {
     /**
      * Items data array.
@@ -65,7 +65,7 @@ class Voterapp2ModelItems extends JModel
     {
         d('in buildQuery');
         $where = ' ';
-        $query = 'SELECT * FROM `#__voterapp2` ';
+        $query = 'SELECT * FROM `#__voterapp` ';
 
         return $query . $where;
     }

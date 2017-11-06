@@ -4,14 +4,14 @@
 defined('_JEXEC') or die('Restricted access');
 
 /**
- * Item Controller for Voterapp2 Component.
+ * Item Controller for Voterapp Component.
  *
  * @package    Philadelphia.Votes
  * @subpackage Components
  *
  * @license    GNU/GPL
  */
-class Voterapp2ControllerMain extends Voterapp2Controller
+class VoterappControllerMain extends VoterappController
 {
     /**
      * Display the edit form.

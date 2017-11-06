@@ -4,14 +4,14 @@
 defined('_JEXEC') or die('Restricted access');
 
 /**
- * Items View for Voterapp2 Component.
+ * Items View for Voterapp Component.
  *
  * @package    Philadelphia.Votes
  * @subpackage Components
  *
  * @license    GNU/GPL
  */
-class Voterapp2ViewItems extends JView
+class VoterappViewItems extends JView
 {
     /**
      * Items view display method.
@@ -22,7 +22,7 @@ class Voterapp2ViewItems extends JView
      **/
     public function display($tpl = null)
     {
-        JToolBarHelper::title(JText::_('Voterapp2 Items Manager'), 'generic.png');
+        JToolBarHelper::title(JText::_('Voterapp Items Manager'), 'generic.png');
         JToolBarHelper::deleteList();
         JToolBarHelper::editListX();
         JToolBarHelper::addNewX();

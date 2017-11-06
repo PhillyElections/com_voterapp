@@ -4,14 +4,14 @@
 defined('_JEXEC') or die('Restricted access');
 
 /**
- * Items View for Voterapp2 Component.
+ * Items View for Voterapp Component.
  *
  * @package    Philadelphia.Votes
  * @subpackage Components
  *
  * @license        GNU/GPL
  */
-class Voterapp2ViewMain extends JView
+class VoterappViewMain extends JView
 {
     /**
      * Items view display method.

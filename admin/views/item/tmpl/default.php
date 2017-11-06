@@ -12,7 +12,7 @@ d('item: in default form', $this);
 $item = ! $this->isNew ? $this->item : JRequest::get('post');
 
 ?>
-<form action="<?=JRoute::_('index.php?option=com_voterapp2');?>" method="post" id="adminForm" name="adminForm" class="form-validate">
+<form action="<?=JRoute::_('index.php?option=com_voterapp');?>" method="post" id="adminForm" name="adminForm" class="form-validate">
     <table cellpadding="0" cellspacing="0" border="0" class="adminform">
         <tbody>
             <tr>

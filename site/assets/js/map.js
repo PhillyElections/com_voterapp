@@ -296,7 +296,7 @@
             invalidAddress();
             return;
         }
-        c = baseUri + "components/com_voterapp2/assets/images/home.png";
+        c = baseUri + "components/com_voterapp/assets/images/home.png";
         b = String(e.geometry.location).replace(/ /g, "");
         n = b.split(",");
         r = n[1] + "%2C" + n[0];
@@ -421,7 +421,7 @@
 
     function getPollingPlace(a, j) {
         var i, f, e, d, h, b, k, l, c,
-        pollingPlaceMain=$("#polling-place-main")
+            pollingPlaceMain = $("#polling-place-main")
         i = f = e = d = h = b = k = l = c = null
 
         pollingPlaceMain.empty();
@@ -862,7 +862,7 @@
                     }
                     google.maps.event.removeListener(f);
                 });
-                var g = baseUri + "components/com_voterapp2/assets/images/congress.png";
+                var g = baseUri + "components/com_voterapp/assets/images/congress.png";
                 var c = new google.maps.Marker({
                     map: map,
                     icon: g,
@@ -897,7 +897,7 @@
                     }
                     google.maps.event.removeListener(g);
                 });
-                var h = baseUri + "components/com_voterapp2/assets/images/polling.png";
+                var h = baseUri + "components/com_voterapp/assets/images/polling.png";
                 var d = new google.maps.Marker({
                     map: map,
                     icon: h,
@@ -1241,13 +1241,13 @@
             g = $("#custom-pasen-districts"),
             c = $("#custom-uscongress-districts"),
             e = [
-            [h, getDivisionShape],
-            [i, getWardShape],
-            [a, getCouncilShape],
-            [b, getStateRepShape],
-            [g, getStateSenateShape],
-            [c, getUsCongressShape]
-        ];
+                [h, getDivisionShape],
+                [i, getWardShape],
+                [a, getCouncilShape],
+                [b, getStateRepShape],
+                [g, getStateSenateShape],
+                [c, getUsCongressShape]
+            ];
         e.forEach(function(j) {
             d(j[0], j[1]);
         });

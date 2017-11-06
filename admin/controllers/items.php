@@ -4,14 +4,14 @@
 defined('_JEXEC') or die('Restricted access');
 
 /**
- * Items Controller for Voterapp2 Component.
+ * Items Controller for Voterapp Component.
  *
  * @package    Philadelphia.Votes
  * @subpackage Components
  *
  * @license    GNU/GPL
  */
-class Voterapp2ControllerItems extends Voterapp2Controller
+class VoterappControllerItems extends VoterappController
 {
     /**
      * Display the Items View.
@@ -34,7 +34,7 @@ class Voterapp2ControllerItems extends Voterapp2Controller
     {
         $mainframe = JFactory::getApplication();
         $cid       = JRequest::getVar('cid');
-        $mainframe->redirect('index.php?option=com_voterapp2&controller=item&task=edit&cid=' . $cid[0]);
+        $mainframe->redirect('index.php?option=com_voterapp&controller=item&task=edit&cid=' . $cid[0]);
     }
 
     public function publish()

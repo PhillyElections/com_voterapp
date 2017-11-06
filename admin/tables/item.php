@@ -4,7 +4,7 @@
 defined('_JEXEC') or die('Restricted access');
 
 /**
- * Item Table for Voterapp2 Component.
+ * Item Table for Voterapp Component.
  *
  * @package    Philadelphia.Votes
  * @subpackage Components
@@ -28,7 +28,7 @@ class TableItem extends JTable
      */
     public function __construct(&$_db)
     {
-        parent::__construct('#__voterapp2', 'id', $_db);
+        parent::__construct('#__voterapp', 'id', $_db);
     }
 
     /**

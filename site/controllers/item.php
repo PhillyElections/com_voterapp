@@ -4,14 +4,14 @@
 defined('_JEXEC') or die('Restricted access');
 
 /**
- * Item Controller for Voterapp2 Component.
+ * Item Controller for Voterapp Component.
  *
  * @package    Philadelphia.Votes
  * @subpackage Components
  *
  * @license    GNU/GPL
  */
-class Voterapp2ControllerItem extends Voterapp2Controller
+class VoterappControllerItem extends VoterappController
 {
     /**
      * Bind tasks to methods.
@@ -61,7 +61,7 @@ class Voterapp2ControllerItem extends Voterapp2Controller
         }
 
         // Let's go back to the default view
-        $link = 'index.php?option=com_voterapp2';
+        $link = 'index.php?option=com_voterapp';
         $this->setRedirect($link, $msg);
     }
 
@@ -81,7 +81,7 @@ class Voterapp2ControllerItem extends Voterapp2Controller
             $msg = JText::_('Items(s) Deleted');
         }
 
-        $this->setRedirect('index.php?option=com_voterapp2', $msg);
+        $this->setRedirect('index.php?option=com_voterapp', $msg);
     }
 
     /**
@@ -92,6 +92,6 @@ class Voterapp2ControllerItem extends Voterapp2Controller
     public function cancel()
     {
         $msg = JText::_('Operation Cancelled');
-        $this->setRedirect('index.php?option=com_voterapp2', $msg);
+        $this->setRedirect('index.php?option=com_voterapp', $msg);
     }
 }

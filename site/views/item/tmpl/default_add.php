@@ -12,7 +12,7 @@ if (count(JRequest::getVar('msg', null, 'post'))) {
 $data = JRequest::get('post');
 
 ?>
-<form action="<?php echo JRoute::_('index.php?option=com_voterapp2'); ?>" method="post" id="adminForm" name="adminForm" class="form-validate">
+<form action="<?php echo JRoute::_('index.php?option=com_voterapp'); ?>" method="post" id="adminForm" name="adminForm" class="form-validate">
     <table cellpadding="0" cellspacing="0" border="0" class="adminform">
         <tbody>
             <tr>

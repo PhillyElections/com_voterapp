@@ -4,14 +4,14 @@
 defined('_JEXEC') or die('Restricted access');
 
 /**
- * Default Controller for Voterapp2 Component.
+ * Default Controller for Voterapp Component.
  *
  * @package    Philadelphia.Votes
  * @subpackage Components
  *
  * @license    GNU/GPL
  */
-class Voterapp2Controller extends JController
+class VoterappController extends JController
 {
     /**
      * Method to display the default view.

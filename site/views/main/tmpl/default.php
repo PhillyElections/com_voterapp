@@ -4,7 +4,6 @@
 <?php
 jimport('kint.kint');
 
-
 ?>
 <script>
     ward_divisions_files = <?php echo json_encode($this->items); ?>
@@ -12,9 +11,9 @@ jimport('kint.kint');
 <?php
 $document = JFactory::getDocument();
 
-$document->addStyleSheet('components/com_voterapp2/assets/css/map.css');
+$document->addStyleSheet('components/com_voterapp/assets/css/map.css');
 $document->addCustomTag('<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places&key=AIzaSyDKUKOnN7xvUV31IcZrXFYYqtLYrkO38hw"></script>');
-$document->addCustomTag('<script src="components/com_voterapp2/assets/js/infobox_packed.js"></script>');
+$document->addCustomTag('<script src="components/com_voterapp/assets/js/infobox_packed.js"></script>');
 $document->addCustomTag('<!--[if lt IE 9]>
     <script src="https://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
     <![endif]-->
@@ -70,9 +69,9 @@ require_once(JPATH_COMPONENT.DS.'assets'.DS.'helpers'.DS.'jsjtext.php');
     jsJText::script('MODALBOX LAST OPTION');
   // after all the strings are listed, call jsJText::load()
   jsJText::load();
-$document->addStyleSheet('components/com_voterapp2/assets/js/select2/select2.css');
-/*$document->addCustomTag('<script type="text/javascript" src="components/com_voterapp2/assets/js/select2/select2.js"></script>');
-$document->addCustomTag('<script type="text/javascript" src="components/com_voterapp2/assets/js/map.js"></script>');*/
+$document->addStyleSheet('components/com_voterapp/assets/js/select2/select2.css');
+/*$document->addCustomTag('<script type="text/javascript" src="components/com_voterapp/assets/js/select2/select2.js"></script>');
+$document->addCustomTag('<script type="text/javascript" src="components/com_voterapp/assets/js/map.js"></script>');*/
 
 $user =& JFactory::getUser();
 
@@ -288,5 +287,5 @@ $user =& JFactory::getUser();
 </table>
 <br/>
 </div>
-<script type="text/javascript" src="components/com_voterapp2/assets/js/select2/select2.js"></script>
-<script type="text/javascript" src="components/com_voterapp2/assets/js/map.js"></script>
+<script type="text/javascript" src="components/com_voterapp/assets/js/select2/select2.js"></script>
+<script type="text/javascript" src="components/com_voterapp/assets/js/map.js"></script>

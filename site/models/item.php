@@ -4,14 +4,14 @@
 defined('_JEXEC') or die('Restricted access');
 
 /**
- * Item Model for Voterapp2 Component.
+ * Item Model for Voterapp Component.
  *
  * @package    Philadelphia.Votes
  * @subpackage Components
  *
  * @license    GNU/GPL
  */
-class Voterapp2ModelVoterapp2 extends JModel
+class VoterappModelVoterapp extends JModel
 {
     /**
      * Constructor retrieves the ID from the request.
