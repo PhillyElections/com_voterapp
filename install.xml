@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="component" version="1.5.0">
+    <name>Voterapp</name>
+    <creationDate>2017-09-20</creationDate>
+    <author>Matthew Murphy</author>
+    <authorEmail>matthew.e.murphy@phila.gov</authorEmail>
+    <authorUrl>http://www.philadelphiavotes.com</authorUrl>
+    <copyright>(C) 2017 City of Philadelphia</copyright>
+    <license>GPL</license>
+    <version>0.1.0</version>
+    <description>Voterapp</description>
+    <install>
+        <sql>
+            <file driver="mysqli" charset="utf8">sql/install.sql</file>
+            <file driver="mysqli">sql/install.sql</file>
+        </sql>
+    </install>
+    <uninstall>
+        <sql>
+            <file driver="mysqli" charset="utf8">sql/uninstall.sql</file>
+            <file driver="mysqli">sql/uninstall.sql</file>
+        </sql>
+    </uninstall>
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>voterapp.php</filename>
+        <filename>controller.php</filename>
+        <folder>assets/</folder>
+        <folder>controllers/</folder>
+        <folder>models/</folder>
+        <folder>views/</folder>
+    </files>
+    <languages folder="language/site">
+        <language tag="en-GB">en-GB.com_voterapp.ini</language>
+        <language tag="es-ES">es-ES.com_voterapp.ini</language>
+    </languages>
+    <administration>
+        <menu link="option=com_voterapp">Voterapp</menu>
+        <files folder="admin">
+            <filename>index.html</filename>
+            <filename>voterapp.php</filename>
+            <filename>controller.php</filename>
+            <folder>assets/</folder>
+            <folder>controllers/</folder>
+            <folder>models/</folder>
+            <folder>sql/</folder>
+            <folder>tables/</folder>
+            <folder>views/</folder>
+        </files>
+    </administration>
+</install>
